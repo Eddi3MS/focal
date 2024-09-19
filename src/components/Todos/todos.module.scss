@@ -1,0 +1,35 @@
+@import '../../app/variables.scss';
+
+.container {
+  width: min(450px, calc(100% - 48px));
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.todos {
+  border: 1px $gray solid;
+  border-radius: 16px;
+  padding: 2rem;
+  max-height: 75vh;
+  overflow: auto;
+
+  h2 {
+    color: $text-gray;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  h2:nth-of-type(2) {
+    margin-top: 1.5rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+}

@@ -1,0 +1,64 @@
+@import '../../../../app/variables.scss';
+
+.todo {
+  border: 1px $gray dashed;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+
+  .text {
+    flex: 1;
+  }
+
+  input {
+    display: none;
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid $gray;
+    border-radius: 4px;
+    color: transparent;
+    transition: all 0.2s ease-in-out;
+  }
+
+  input:checked ~ .checkbox {
+    background: $lighter-blue;
+    border-color: $blue;
+    color: $blue;
+  }
+
+  input:checked ~ .text {
+    text-decoration: line-through;
+    color: $text-gray;
+  }
+
+  button {
+    background: transparent;
+    border: 0;
+    color: $gray2;
+    display: flex;
+    align-items: center;
+  }
+
+  &:hover {
+    background: $bg-hover;
+    border-color: $bg-hover;
+
+    .checkbox {
+      border-color: $gray2;
+    }
+  }
+
+  @media (max-width: 840px) {
+    padding: 1rem 0.5rem;
+  }
+}

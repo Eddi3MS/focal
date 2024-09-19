@@ -1,0 +1,22 @@
+@import '../../app/variables.scss';
+
+.button {
+  background: $gray3;
+  font-size: 1rem;
+  color: $black;
+  border: none;
+  padding-block: 1rem;
+  flex: 1;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &.danger {
+    background: linear-gradient(to right, $red, $light-red);
+    color: $white;
+  }
+
+  &.primary {
+    background: linear-gradient(to right, $blue, $light-blue);
+    color: $white;
+  }
+}
